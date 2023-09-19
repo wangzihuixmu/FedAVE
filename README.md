@@ -1,2 +1,2 @@
 # FedAVE
-Code is coming soon if paper is accepted.
+Coming soon when the paper is accepted.

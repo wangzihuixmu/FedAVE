@@ -1,0 +1,69 @@
+// 训练模型
+// mnist
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version":"0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--task",             "mnist_cnum10_dist18_skew0.0_seed0",
+                "--model",            "mlp",
+                "--algorithm",           "FedAVE",
+                "--num_rounds",       "5000",
+                "--num_epochs",        "3",
+                "--learning_rate",    "0.15",
+                "--batch_size",        "32",
+                "--eval_interval",     "1",
+                "--Beta",               "2",
+                "--seed",               "5",
+                "--gpu",                "3",
+            ]
+        }
+    ]
+}
+
+
+
+
+// // // 划分数据
+// {
+//     // Use IntelliSense to learn about possible attributes.
+//     // Hover to view descriptions of existing attributes.
+//     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Python: Current File",
+//             "type": "python",
+//             "request": "launch",
+//             "program": "${file}",
+//             "console": "integratedTerminal",
+//             "args": 
+//             [
+//                 // "--dataset",        "cifar10",
+//                 // "--dataset",        "emnist",
+//                 // "--dataset",        "cifar100",
+//                 "--dataset",        "mnist",
+//                 // "--dataset",        "emnist",
+//                 // "--dist",           "2",
+//                 "--dist",               "18",
+//                 //dist == 18     powerlaw
+//                 // dist == 19     classimbalance
+//                 // dist == 20    uniform
+//                 //dist == 21    wcla 极端的cla，一人5类，数据量600
+//                 //dist == 22    wcla 极端的cla，一人2类，数据量600
+//                 //dist == 23    构建一模一样的用户，即包含所有类别，且类别数量一样
+//                 "--skew",           "0.0",    // 构造noniid的场景的参数  Dirichlet distribution
+//                 "--num_clients",    "10"
+//             ]
+//         }
+//     ]
+// }

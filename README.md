@@ -1,7 +1,10 @@
+# FedAVE: Adaptive Data Value Evaluation Framework for Collaborative Fairness in Federated Learning 
+This repository is an implementation of the collaborative fairness of federated learning algorithm (under review).
 
 **First**, run the command below to get the splited dataset MNIST:
-'''sh
+
 # generate the splited dataset
+'''sh
 python generate_fedtask.py --dataset mnist --dist 0 --skew 0 --num_clients 10
 '''
 
